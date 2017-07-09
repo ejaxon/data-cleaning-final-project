@@ -59,7 +59,7 @@ run_analysis <- function(dir = "./UCI_HAR_Dataset") {
     names(result) <- convert_names(names(result))
 
     # Write the the resulting tidy dataset out
-    write.csv(result,file="./results.csv", row.names=FALSE)
+    write.csv(result,file="./tidy_full.csv", row.names=FALSE)
 
     ####################################################################################
     ## 5. From the data set in step 4, creates a second, independent tidy data set with
@@ -71,7 +71,7 @@ run_analysis <- function(dir = "./UCI_HAR_Dataset") {
 
     # And use plyr function to summaryize by subject & activity
     sma <- ddply(sm,.(subject,activity,variable),summarize, mean=mean(value))
-    write.csv(sma, file="./results_average.csv", row.names=FALSE)
+    write.csv(sma, file="./tidy_average.csv", row.names=FALSE)
     invisible()
 }
 
