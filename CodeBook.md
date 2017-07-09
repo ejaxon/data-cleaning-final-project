@@ -6,9 +6,9 @@ This code book describes two tidy datasets that have been created from the data 
 > Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012 
 
 
-The dataset processed here may be downloaded [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). The ````README.txt```` file in that directory details the processing applied to the raw measurements in order to generate the datasets that I have worked with here.
+The original dataset may be downloaded [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). The ````README.txt```` file included there details the processing applied to the raw measurements in order to generate the datasets that I have worked with here.
 
-From the full set of data from the study, the script in ````run_analysis.R```` in this repository creates two tidy datasets, stored here in the ````tidy_full.csv```` and ````tidy_average.csv```` files. Both files can be read in R using ````read.csv(<filename>)````. Note that the ````plyr```` and ````reshape2```` R libraries must be installed (the script will automatically load them).
+From the full set of data from the study, the script in ````run_analysis.R```` in this repository creates two tidy datasets, stored here in the ````tidy_full.csv```` and ````tidy_average.csv```` files. Both files can be read in R using ````read.csv(<filename>)````. The script has a single, optional argument specifying the directory path for the source data. If you unzip the downloaded file and run the function in the same directory as the script, the default value of the path will work. Note that the ````plyr```` and ````reshape2```` R libraries must be installed (the script will automatically load them).
 
 The processing performed is as follows:
 
