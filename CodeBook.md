@@ -14,7 +14,7 @@ The processing performed is as follows:
 
 * Create the ````tidy_full.csv```` dataset
     * Recombine the original training and test datasets, subject IDs and activity codes into a single dataframe, replacing the activity codes with their descriptive string equivalents from the ````activity_labels.txt```` file. The data is gathered from the following files: ````test/X_test.txt, train/X_train.txt, test/y_test.txt, train/y_train.txt, test/subject_test.txt, train/subject_train.txt````.
-    * Extract only measurements on the mean and standard deviation for each measurement (i.e., those labeled with either ````-mean()```` or ````-std()````).
+    * Extract only measurements on the mean and standard deviation for each measurement (i.e., those labeled with either ```-mean()``` or ```-std()```).
     * Rename all the variables with more readable, descriptive variable names.
     * Write out the resulting dataset as tidy_full.csv
 * Create the ````tidy_average.csv```` dataset
