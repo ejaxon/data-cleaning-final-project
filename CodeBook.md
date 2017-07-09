@@ -10,6 +10,8 @@ The original dataset may be downloaded [here](https://d396qusza40orc.cloudfront.
 
 From the full set of data from the study, the script in `run_analysis.R` in this repository creates two tidy datasets, stored here in the `tidy_full.csv` and `tidy_average.csv` files. Both files can be read in R using `read.csv()` with only the filename argument. The script has a single, optional argument specifying the directory path for the source data. If you unzip the downloaded file and run the function in the same directory as the script, the default value of the path will work. Note that the `plyr` and `reshape2` R libraries must be installed (the script will automatically load them).
 
+The full dataset (`tidy_full.csv`) is equivalent to the original dataset for the subset of variables selected. It differs primarily in the fact that it has been gathered into a single tidy table containing all information on all observations. The second dataset (`tidy_average.csv`) contains the average of each measurement for each subject/activity pair.
+
 The processing performed is as follows:
 
 * Create the `tidy_full.csv` dataset
@@ -36,8 +38,7 @@ The `subject` variable is an integer ID ranging from 1 to 30 for each of the 30 
 
 The `activity` variable is a string indicating the activity being performed when a measurement was taken. The values are `laying`, `sitting`, `standing`, `walking`, `walking_downstairs`, and `walking_upstairs`.
 
-
-### Body Acceleration Measurements (Numeric)
+### Body Acceleration Measurements
 Acceleration measurements are in standard gravity units 'g'.
 
 #### body.acceleration.x.time.mean
@@ -70,6 +71,18 @@ The standard deviation of the Z component of the body acceleration in the time d
 
 - __Min:__ -1.0, __Max:__ 1.0, __Median:__ -0.8508
 
+#### body.acceleration.magnitude.time.mean
+The mean of the body acceleration magnitude in the time domain.
+
+- __Min:__ -1.0, __Max:__ 1.0, __Median:__ -0.8746
+
+#### body.acceleration.magnitude.time.stddev
+The standard deviation of the body acceleration magnitude in the time domain.
+
+- __Min:__ -1.0, __Max:__ 1.0, __Median:__ -0.8437
+
+
+
 ### Gravity Acceleration Measurements
 Acceleration measurements are in standard gravity units 'g'.
 
@@ -101,7 +114,17 @@ The mean of the Z component of the gravity acceleration in the time domain.
 #### gravity.acceleration.z.time.stddev
 The standard deviation of the Z component of the body acceleration in the time domain.
 
-- __Min:__ -1.0, __Max:__ 1.0, __Median:__ -0.9665
+#### gravity.acceleration.magnitude.time.mean
+The mean of the gravity acceleration magnitude in the time domain.
+
+- __Min:__ -1.0, __Max:__ 1.0, __Median:__ -0.8746
+
+#### gravity.acceleration.magnitude.time.stddev
+The standard deviation of the body acceleration magnitude in the time domain.
+
+- __Min:__ -1.0, __Max:__ 1.0, __Median:__ -0.8437
+
+
 
 ### Body Acceleration Jerk Measurements
 
@@ -136,6 +159,15 @@ The mean of the Z component of the body acceleration jerk in the time domain.
 The standard deviation of the Z component of the body acceleration jerk in the time domain.
 
 - __Min:__ -1.0, __Max:__ 1.0, __Median:__ -0.9543
+
+#### body.acceleration.jerk.magnitude.time.mean
+The mean of the body acceleration jerk magnitude in the time domain.
+- __Min:__ -1.0, __Max:__ 1.0, __Median:__ -0.9481
+
+#### body.acceleration.jerk.magnitude.time.stddev
+The standard deviation of the body acceleration jerk magnitude in the time domain.
+- __Min:__ -1.0, __Max:__ 1.0, __Median:__ -0.9288
+ 
 
 ### Body Angular Velocity Measurements
 
@@ -208,18 +240,8 @@ The standard deviation of the Z component of the body angular jerk in the time d
 
 body linear acceleration and body angular velocity 
            
-body.acceleration.magnitude.time.mean body.acceleration.magnitude.time.stddev
-Min.   :-1.0000                       Min.   :-1.0000                        
-Median :-0.8746                       Median :-0.8437                        
-Max.   : 1.0000                       Max.   : 1.0000                        
- gravity.acceleration.magnitude.time.mean gravity.acceleration.magnitude.time.stddev
- Min.   :-1.0000                          Min.   :-1.0000                           
- Median :-0.8746                          Median :-0.8437                           
- Max.   : 1.0000                          Max.   : 1.0000                           
- body.acceleration.jerk.magnitude.time.mean body.acceleration.jerk.magnitude.time.stddev
- Min.   :-1.0000                            Min.   :-1.0000                             
- Median :-0.9481                            Median :-0.9288                             
- Max.   : 1.0000                            Max.   : 1.0000                             
+                        
+                        
  body.gyro.magnitude.time.mean body.gyro.magnitude.time.stddev body.gyro.jerk.time.mean
  Min.   :-1.0000               Min.   :-1.0000                 Min.   :-1.0000         
  Median :-0.8223               Median :-0.8259                 Median :-0.9559         
@@ -264,4 +286,3 @@ Max.   : 1.0000                       Max.   : 1.0000
  Min.   :-1.0000                          
  Median :-0.9382                          
  Max.   : 1.0000                          
- 
