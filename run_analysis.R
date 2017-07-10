@@ -94,43 +94,54 @@ convert_names <- function(names) {
         }
         else if (grepl("^fBodyBody",nm)) {
             if (grepl("^fBodyBodyAccJerkMag",nm)) {
-                v = "body.body.acceleration.jerk.magnitude"
+                v = "body.acceleration.jerk"
+                coord = ".magnitude"
             }
             else if (grepl("^fBodyBodyGyroMag",nm)) {
-                v = "body.body.gyro.magnitude"
+                v = "body.angular.velocity"
+                coord = ".magnitude"
             }
-            else {
-                v = "body.body.gyro.jerk.magnitude"
+            else if (grepl("^fBodyBodyGyroJerkMag",nm)) {
+                v = "body.angular.jerk"
+                coord = ".magnitude"
             }
         }
         else if (grepl("^[tf]BodyAccJerkMag",nm)) {
-            v = "body.acceleration.jerk.magnitude"
+            v = "body.acceleration.jerk"
+            coord = ".magnitude"
         }
         else if (grepl("^[tf]BodyAccJerk",nm)) {
             v = "body.acceleration.jerk"
         }
         else if (grepl("^[tf]BodyAccMag",nm)) {
-            v = "body.acceleration.magnitude"
+            v = "body.acceleration"
+            coord = ".magnitude"
         }
         else if (grepl("^[tf]BodyAcc",nm)) {
             v = "body.acceleration"
         }
         else if (grepl("^[tf]GravityAccMag",nm)) {
-            v = "gravity.acceleration.magnitude"
+            v = "gravity.acceleration"
+            coord = ".magnitude"
         }
         else if (grepl("^[tf]GravityAcc",nm)) {
             v = "gravity.acceleration"
         }
         else if (grepl("^[tf]BodyGyroMag",nm)) {
-            v = "body.gyro.magnitude"
+            v = "body.angular.velocity"
+            coord = ".magnitude"
+        }
+        else if (grepl("^[tf]BodyGyroJerkMag",nm)) {
+            v = "body.angular.jerk"
+            coord = ".magnitude"
         }
         else if (grepl("^[tf]BodyGyroJerk",nm)) {
-            v = "body.gyro.jerk"
+            v = "body.angular.jerk"
         }
         else if (grepl("^[tf]BodyGyro",nm)) {
-            v = "body.gyro"
+            v = "body.angular.velocity"
         }        
-        result[i] <- paste0(v,coord,domain,method)
+        result[i] <- paste0(v,domain,coord, method)
     }
     result
 }
