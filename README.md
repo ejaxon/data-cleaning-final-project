@@ -49,13 +49,14 @@ The processing performed in the script is as follows:
 
 1. Step 2 of the assignment instructs to extract only measurements on the mean and standard deviation. It seemed obvious that all variables with `-mean()` or `-std()` were to be extracted, but it was not clear whether this instruction also included variables that computed a weighted average over frequencies, labeled with `-meanFreq()`. I decide _NOT_ to include them since they were not a simple mean.
 
-2. I used a simple pattern for renaming variables with more descriptive names:
+2. Step 5 specifies a dataset containing the "average of each variable for each activity and each subject". This is somewhat ambiguous - it could be interpreted to mean either separate averages for each activity and for each subject or an average for each subject/activity pair. I chose the latter interpretation as making more physical sense.
+
+3. I used a simple pattern for renaming variables with more descriptive names. I did my best to give accurate descriptive names, however, since I am not very knowledgeable about the physics, I may have mistakenly translated in some cases. Here is the pattern (the measure name was often a multi-part descriptive name, e.g., `body.acceleration`):
 ````
     [descriptive measure name].[time | freq].[x | y | z | magnitude].[mean | stddev]
 ````
-where the measure name was often a multi-part descriptive name, e.g., `body.acceleration`. I did my best to give accurate descriptive names, however, since I am not very knowledgeable about the physics, I may have mistakenly translated in some cases.
 
-3. There were a few frequency-domain variables starting with `fBodyBody`. After researching, I concluded that they simply mistakenly repeat `Body` and I translated them on that assumption.
+4. There were a few frequency-domain variables starting with `fBodyBody`. After researching, I concluded that they simply mistakenly repeat `Body` and I translated them on that assumption.
 
 
 
