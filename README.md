@@ -1,40 +1,61 @@
+# Data Cleaning Course Final Project
 
-If you download the dataset from [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and unzip in this directory, then you can run
+This repository contains the code and output for the final course project in the Coursera Data Cleaning Course. The contents include:
 
+1. run_analysis.R - A script which processes the original data into two tidy datasets
+2. CodeBook.md - A codebook containing information on the processing of the raw data and descriptions of all variables.
+3. tidy_full.csv - The first tidy dataset specified by the assignment.
+4. tidy_average.csv - The second tidy dataset specified by the assignment.
+
+## Running the Script
+
+The following steps describe the simplest way to run the script:
+1. Clone this repository.
+2. Download the original dataset from [this link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and place in the repository directory
+3. Unzip the downloaded file - it will create a directory called `UCI_HAR_Dataset`
+4. Start R and set the working directory to the repository directory
+5. Ensure that the `reshape2` and `plyr` libraries are installed (the script will load them, if needed)
+6. Run
 ````
-source("./run_analysis.R")
+source("run_analysis.R")
 run_analysis()
 ````
-If the data directory is elsewhere, you can pass it in as an argument. For example, if you unzipped it in the directory above this one:
 
+The script will create the two tidy datasets required by the assignment in `tidy_full.csv` and `tidy_average.csv`. They may be read back into R with `read.csv("tidy_full.csv")` and `read.csv("tidy_average.csv")`. The script takes a single optional argument specifying the directory where the original data may be found - it defaults to `"./UCI_HAR_Dataset"`.
+
+## Script Documentation
+
+The assignment was to create a script file called `run_analysis.R` with a script that:
+
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names.
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+The processing performed in the script is as follows:
+
+* Create the `tidy_full.csv` dataset
+    * Recombine the original training and test datasets, subject IDs and activity codes into a single dataframe, replacing the activity codes with their descriptive string equivalents from the `activity_labels.txt` file. The data is gathered from the following files: `test/X_test.txt`, `train/X_train.txt`, `test/y_test.txt`, `train/y_train.txt`, `test/subject_test.txt`, `train/subject_train.txt`. This accomplished steps 1 and 3 above.
+    * Extract only the mean and standard deviation variables for each measurement (i.e., those labeled with either `-mean()` or `-std()`), per step 2 above.
+    * Rename all the variables with more readable, descriptive variable names, per step 4 above.
+    * Write out the resulting dataset as `tidy_full.csv`
+* Create the `tidy_average.csv` dataset, per step 5 above.
+    * Use the `melt()` function from the `reshape2` library to transform the wide-form dataset (one column per measurement variable) into a narrow-form one (one column for variable name and one for its value).
+    * Use the `ddply()` function from the `plyr` library to compute the mean of each measurement variable for each subject/activity combination.
+    * Write out the resulting dataset as `tidy_average.csv`
+
+### Additional Explanations and Assumptions
+
+1. Step 2 of the assignment instructs to extract only measurements on the mean and standard deviation. It seemed obvious that all variables with `-mean()` or `-std()` were to be extracted, but it was not clear whether this instruction also included variables that computed a weighted average over frequencies, labeled with `-meanFreq()`. I decide _NOT_ to include them since they were not a simple mean.
+
+2. I used a simple pattern for renaming variables with more descriptive names:
 ````
-source("./run_analysis.R")
-run_analysis("..")
+    [descriptive measure name].[time | freq].[x | y | z | magnitude].[mean | stddev]
 ````
+where the measure name was often a multi-part descriptive name, e.g., `body.acceleration`. I did my best to give accurate descriptive names, however, since I am not very knowledgeable about the physics, I may have mistakenly translated in some cases.
 
-The script will write out two files in the current directory: _results.csv_ and _results_average.csv_. These can be read back into R with ````read.csv("./results.csv")```` 
+3. There were a few frequency-domain variables starting with `fBodyBody`. After researching, I concluded that they simply mistakenly repeat `Body` and I translated them on that assumption.
 
-Note that there are several body.body. Assume mistaken repetition.
 
-Note decision not to include measurements with terms meanFreq() (and of course not angles)
-294 fBodyAcc-meanFreq()-X
-295 fBodyAcc-meanFreq()-Y
-296 fBodyAcc-meanFreq()-Z
-373 fBodyAccJerk-meanFreq()-X
-374 fBodyAccJerk-meanFreq()-Y
-375 fBodyAccJerk-meanFreq()-Z
-452 fBodyGyro-meanFreq()-X
-453 fBodyGyro-meanFreq()-Y
-454 fBodyGyro-meanFreq()-Z
-513 fBodyAccMag-meanFreq()
-526 fBodyBodyAccJerkMag-meanFreq()
-539 fBodyBodyGyroMag-meanFreq()
-552 fBodyBodyGyroJerkMag-meanFreq()
-555 angle(tBodyAccMean,gravity)
-556 angle(tBodyAccJerkMean),gravityMean)
-557 angle(tBodyGyroMean,gravityMean)
-558 angle(tBodyGyroJerkMean,gravityMean)
-559 angle(X,gravityMean)
-560 angle(Y,gravityMean)
-561 angle(Z,gravityMean)
 
