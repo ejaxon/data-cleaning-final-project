@@ -45,6 +45,8 @@ The processing performed in the script is as follows:
     * Use the `ddply()` function from the `plyr` library to compute the mean of each measurement variable for each subject/activity combination.
     * Write out the resulting dataset as `tidy_average.csv`
 
+The script itself is also extensively commented.
+
 ### Additional Explanations and Assumptions
 
 1. Step 2 of the assignment instructs to extract only measurements on the mean and standard deviation. It seemed obvious that all variables with `-mean()` or `-std()` were to be extracted, but it was not clear whether this instruction also included variables that computed a weighted average over frequencies, labeled with `-meanFreq()`. I decide _NOT_ to include them since they were not a simple mean.
