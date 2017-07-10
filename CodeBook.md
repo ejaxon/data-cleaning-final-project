@@ -43,66 +43,82 @@ Acceleration measurements are in standard gravity units 'g'.
 
 #### body.acceleration.time.x.mean
 The mean of the X component of the body acceleration in the time domain.
+
 Variable name in original dataset: tBodyAcc-mean()-X
 
 #### body.acceleration.time.x.stddev
 The standard deviation of the X component of the body acceleration in the time domain.
+
 Variable name in original dataset: tBodyAcc-std()-X
 
 #### body.acceleration.time.y.mean
 The mean of the Y component of the body acceleration in the time domain.
+
 Variable name in original dataset: tBodyAcc-mean()-Y
 
 #### body.acceleration.time.y.stddev
 The standard deviation of the Y component of the body acceleration in the time domain.
+
 Variable name in original dataset: tBodyAcc-std()-Y
 
 #### body.acceleration.time.z.mean
 The mean of the Y component of the body acceleration in the time domain.
+
 Variable name in original dataset: tBodyAcc-mean()-Z
 
 #### body.acceleration.time.z.stddev
 The standard deviation of the Z component of the body acceleration in the time domain.
+
 Variable name in original dataset: tBodyAcc-std()-Z
 
 #### body.acceleration.time.magnitude.mean
 The mean of the body acceleration magnitude in the time domain.
+
 Variable name in original dataset: tBodyAccMag-mean()
 
 #### body.acceleration.time.magnitude.stddev
 The standard deviation of the body acceleration magnitude in the time domain.
+
 Variable name in original dataset: tBodyAccMag-std()
 
 #### body.acceleration.freq.x.mean
 The mean of the X component of the body acceleration in the frequency domain.
+
 Variable name in original dataset: fBodyAcc-mean()-X
 
 #### body.acceleration.freq.x.stddev
 The standard deviation of the X component of the body acceleration in the frequency domain.
+
 Variable name in original dataset: fBodyAcc-std()-X
 
 #### body.acceleration.freq.y.mean
 The mean of the Y component of the body acceleration in the frequency domain.
+
 Variable name in original dataset: fBodyAcc-mean()-Y
 
 #### body.acceleration.freq.y.stddev
 The standard deviation of the Y component of the body acceleration in the frequency domain.
+
 Variable name in original dataset: fBodyAcc-std()-Y
 
 #### body.acceleration.freq.z.mean
 The mean of the Y component of the body acceleration in the frequency domain.
+
 Variable name in original dataset: fBodyAcc-mean()-Z
 
 #### body.acceleration.freq.z.stddev
 The standard deviation of the Z component of the body acceleration in the frequency domain.
+
 Variable name in original dataset: fBodyAcc-std()-Z
 
 #### body.acceleration.magnitude.freq.mean
 The mean of the body acceleration magnitude in the frequency domain.
+
 Variable name in original dataset: fBodyAccMag-mean()
 
 #### body.acceleration.magnitude.freq.stddev
 The standard deviation of the body acceleration magnitude in the frequency domain.
+
 Variable name in original dataset: fBodyAccMag-std()
 
 
@@ -111,74 +127,92 @@ Acceleration jerk is the rate of change of the acceleration. Measurements are in
 
 #### body.acceleration.jerk.time.x.mean
 The mean of the X component of the body acceleration jerk in the time domain.
+
 Variable name in original dataset: tBodyAccJerk-mean()-X
 
 #### body.acceleration.jerk.time.x.stddev
 The standard deviation of the X component of the body acceleration jerk in the time domain.
+
 Variable name in original dataset: tBodyAccJerk-std()-X
 
 #### body.acceleration.jerk.time.y.mean
 The mean of the Y component of the body acceleration jerk in the time domain.
+
 Variable name in original dataset: tBodyAccJerk-mean()-Y
 
 #### body.acceleration.jerk.time.y.stddev
 The standard deviation of the Y component of the body acceleration jerk in the time domain.
+
 Variable name in original dataset: tBodyAccJerk-std()-Y
 
 #### body.acceleration.jerk.time.z.mean
 The mean of the Z component of the body acceleration jerk in the time domain.
+
 Variable name in original dataset: tBodyAccJerk-mean()-Z
 
 #### body.acceleration.jerk.time.z.stddev
 The standard deviation of the Z component of the body acceleration jerk in the time domain.
+
 Variable name in original dataset: tBodyAccJerk-std()-Z
 
 #### body.acceleration.jerk.time.magnitude.mean
 The mean of the body acceleration jerk magnitude in the time domain.
+
 Variable name in original dataset: tBodyAccJerkMag-mean()
 
 #### body.acceleration.jerk.time.magnitude.stddev
 The standard deviation of the body acceleration jerk magnitude in the time domain.
+
 Variable name in original dataset: tBodyAccJerkMag-std()
 
 #### body.acceleration.jerk.freq.x.mean
 The mean of the X component of the body acceleration jerk in the frequency domain.
+
 Variable name in original dataset: fBodyAccJerk-mean()-X
 
 #### body.acceleration.jerk.freq.x.stddev
 The standard deviation of the X component of the body acceleration jerk in the frequency domain.
+
 Variable name in original dataset: fBodyAccJerk-std()-X
 
 #### body.acceleration.jerk.freq.y.mean
 The mean of the Y component of the body acceleration jerk in the frequency domain.
+
 Variable name in original dataset: fBodyAccJerk-mean()-Y
 
 #### body.acceleration.jerk.freq.y.stddev
 The standard deviation of the Y component of the body acceleration jerk in the frequency domain.
+
 Variable name in original dataset: fBodyAccJerk-std()-Y
 
 #### body.acceleration.jerk.freq.z.mean
 The mean of the Z component of the body acceleration jerk in the frequency domain.
+
 Variable name in original dataset: fBodyAccJerk-mean()-Z
 
 #### body.acceleration.jerk.freq.z.stddev
 The standard deviation of the Z component of the body acceleration jerk in the frequency domain.
+
 Variable name in original dataset: fBodyAccJerk-std()-Z
 
 #### body.acceleration.jerk.magnitude.freq.mean
 The mean of the body acceleration jerk magnitude in the frequency domain.
+
 Variable name in original dataset: fBodyAccJerkMag-mean()
 
 #### body.acceleration.jerk.magnitude.freq.stddev
 The standard deviation of the body acceleration jerk magnitude in the frequency domain.
+
 Variable name in original dataset: fBodyAccJerkMag-std()
 
 #### body.acceleration.jerk.magnitude.freq.mean
 The mean of the body acceleration jerk magnitude in the frequency domain.
+
 Variable name in original dataset: fBodyBodyAccJerkMag-mean()
 
 #### body.acceleration.jerk.magnitude.freq.stddev
 The standard deviation of the body acceleration jerk magnitude in the frequency domain.
+
 Variable name in original dataset: fBodyBodyAccJerkMag-std()
 
 
@@ -187,67 +221,83 @@ Angular velocity measurements are in radians per second.
 
 #### body.angular.velocity.time.x.mean
 The mean of the X component of the body angular velocity in the time domain.
+
 Variable name in original dataset: tBodyGyro-mean()-X
 
 #### body.angular.velocity.time.x.stddev
 The standard deviation of the X component of the body angular velocity in the time domain.
+
 Variable name in original dataset: tBodyGyro-std()-X
 
 #### body.angular.velocity.time.y.mean
 The mean of the Y component of the body angular velocity in the time domain.
+
 Variable name in original dataset: tBodyGyro-mean()-Y
 
 #### body.angular.velocity.time.y.stddev
 The standard deviation of the Y component of the body angular velocity in the time domain.
+
 Variable name in original dataset: tBodyGyro-std()-Y
 
 #### body.angular.velocity.time.z.mean
 The mean of the Z component of the body angular velocity in the time domain.
+
 Variable name in original dataset: tBodyGyro-mean()-Z
 
 #### body.angular.velocity.time.z.stddev
 The standard deviation of the Z component of the body angular velocity in the time domain.
+
 Variable name in original dataset: tBodyGyro-std()-Z
 
 #### body.angular.velocity.time.magnitude.mean
 The mean of the body angular velocity magnitude in the time domain.
+
 Variable name in original dataset: tBodyGyroMag-mean()
 
 #### body.angular.velocity.time.magnitude.stddev
 The mean of the body angular velocity magnitude in the time domain.
+
 Variable name in original dataset: tBodyGyroMag-std()
 
 
 #### body.angular.velocity.freq.x.mean
 The mean of the X component of the body angular velocity in the frequency domain.
+
 Variable name in original dataset: fBodyGyro-mean()-X
 
 #### body.angular.velocity.freq.x.stddev
 The standard deviation of the X component of the body angular velocity in the frequency domain.
+
 Variable name in original dataset: fBodyGyro-std()-X
 
 #### body.angular.velocity.freq.y.mean
 The mean of the Y component of the body angular velocity in the frequency domain.
+
 Variable name in original dataset: fBodyGyro-mean()-Y
 
 #### body.angular.velocity.freq.y.stddev
 The standard deviation of the Y component of the body angular velocity in the frequency domain.
+
 Variable name in original dataset: fBodyGyro-std()-Y
 
 #### body.angular.velocity.freq.z.mean
 The mean of the Z component of the body angular velocity in the frequency domain.
+
 Variable name in original dataset: fBodyGyro-mean()-Z
 
 #### body.angular.velocity.freq.z.stddev
 The standard deviation of the Z component of the body angular velocity in the frequency domain.
+
 Variable name in original dataset: fBodyGyro-std()-Z
 
 #### body.angular.velocity.magnitude.freq.mean
 The mean of the body angular velocity magnitude in the frequency domain.
+
 Variable name in original dataset: fBodyBodyGyroMag-mean()
 
 #### body.angular.velocity.magnitude.freq.stddev
 The standard deviation of the body angular velocity magnitude in the frequency domain.
+
 Variable name in original dataset: fBodyBodyGyroMag-std()
 
 ### Body Angular Jerk Measurements
@@ -255,42 +305,52 @@ Angular jerk measurements are in radians per second per second.
 
 #### body.angular.jerk.time.x.mean
 The mean of the X component of the body angular jerk in the time domain.
+
 Variable name in original dataset: tBodyGyroJerk-mean()-X
 
 #### body.angular.jerk.time.x.stddev
 The standard deviation of the X component of the body angular jerk in the time domain.
+
 Variable name in original dataset: tBodyGyroJerk-std()-X
 
 #### body.angular.jerk.time.y.mean
 The mean of the Y component of the body angular jerk in the time domain.
+
 Variable name in original dataset: tBodyGyroJerk-mean()-Y
 
 #### body.angular.jerk.time.y.stddev
 The standard deviation of the Y component of the body angular jerk in the time domain.
+
 Variable name in original dataset: tBodyGyroJerk-std()-Y
 
 #### body.angular.jerk.time.z.mean
 The mean of the Z component of the body angular jerk in the time domain.
+
 Variable name in original dataset: tBodyGyroJerk-mean()-Z
 
 #### body.angular.jerk.time.z.stddev
 The standard deviation of the Z component of the body angular jerk in the time domain.
+
 Variable name in original dataset: tBodyGyroJerk-std()-Z
 
 #### body.angular.jerk.time.magnitude.mean
 The mean of the body angular jerk magnitude in the time domain.
+
 Variable name in original dataset:  tBodyGyroJerkMag-mean()
 
 #### body.angular.jerk.time.magnitude.stddev
 The standard deviation of the body angular jerk magnitude in the time domain.
+
 Variable name in original dataset:  tBodyGyroJerkMag-std()
 
 #### body.angular.jerk.magnitude.freq.mean
 The mean of the body angular jerk magnitude in the frequency domain.
+
 Variable name in original dataset:  fBodyBodyGyroJerkMag-mean()
 
 #### body.angular.jerk.magnitude.freq.stddev
 The standard deviation of the body angular jerk magnitude in the frequency domain.
+
 Variable name in original dataset:  fBodyBodyGyroJerkMag-std()
 
 
@@ -299,32 +359,40 @@ Acceleration measurements are in standard gravity units 'g'.
 
 #### gravity.acceleration.time.x.mean
 The mean of the X component of the gravity acceleration in the time domain.
+
 Variable name in original dataset: tGravityAcc-mean()-X
 
 #### gravity.acceleration.time.x.stddev
 The standard deviation of the X component of the body acceleration in the time domain.
+
 Variable name in original dataset: tGravityAcc-std()-X
 
 #### gravity.acceleration.time.y.mean
 The mean of the Y component of the gravity acceleration in the time domain.
+
 Variable name in original dataset: tGravityAcc-mean()-Y
 
 #### gravity.acceleration.time.y.stddev
 The standard deviation of the Y component of the body acceleration in the time domain.
+
 Variable name in original dataset: tGravityAcc-std()-Y
 
 #### gravity.acceleration.time.z.mean
 The mean of the Z component of the gravity acceleration in the time domain.
+
 Variable name in original dataset: tGravityAcc-mean()-Z
 
 #### gravity.acceleration.time.z.stddev
 The standard deviation of the Z component of the body acceleration in the time domain.
+
 Variable name in original dataset: tGravityAcc-std()-Z
 
 #### gravity.acceleration.time.magnitude.mean
 The mean of the gravity acceleration magnitude in the time domain.
+
 Variable name in original dataset: tGravityAccMag-mean()
 
 #### gravity.acceleration.time.magnitude.stddev
 The standard deviation of the body acceleration magnitude in the time domain.
+
 Variable name in original dataset: tGravityAccMag-std()
