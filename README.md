@@ -4,8 +4,8 @@ This repository contains the code and output for the final course project in the
 
 1. run_analysis.R - A script which processes the original data into two tidy datasets
 2. CodeBook.md - A codebook containing information on the processing of the raw data and descriptions of all variables.
-3. tidy_full.csv - The first tidy dataset specified by the assignment.
-4. tidy_average.csv - The second tidy dataset specified by the assignment.
+3. tidy_full.txt - The first tidy dataset specified by the assignment.
+4. tidy_average.txt - The second tidy dataset specified by the assignment.
 
 ## Running the Script
 
