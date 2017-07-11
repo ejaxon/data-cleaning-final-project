@@ -21,7 +21,7 @@ source("run_analysis.R")
 run_analysis()
 ````
 
-The script will create the two tidy datasets required by the assignment in `tidy_full.csv` and `tidy_average.csv`. They may be read back into R with `read.csv("tidy_full.csv")` and `read.csv("tidy_average.csv")`. The script takes a single optional argument specifying the directory where the original data may be found - it defaults to `"./UCI_HAR_Dataset"`.
+The script will create the two tidy datasets required by the assignment in `tidy_full.txt` and `tidy_average.txt`. They may be read back into R with `read.table("tidy_full.csv")` and `read.table("tidy_average.csv")`. The script takes a single optional argument specifying the directory where the original data may be found - it defaults to `"./UCI_HAR_Dataset"`.
 
 ## Script Documentation
 
@@ -35,15 +35,15 @@ The assignment was to create a script file called `run_analysis.R` with a script
 
 The processing performed in the script is as follows:
 
-* Create the `tidy_full.csv` dataset
+* Create the `tidy_full.txt` dataset
     * Recombine the original training and test datasets, subject IDs and activity codes into a single dataframe, replacing the activity codes with their descriptive string equivalents from the `activity_labels.txt` file. The data is gathered from the following files: `test/X_test.txt`, `train/X_train.txt`, `test/y_test.txt`, `train/y_train.txt`, `test/subject_test.txt`, `train/subject_train.txt`. This accomplished steps 1 and 3 above.
     * Extract only the mean and standard deviation variables for each measurement (i.e., those labeled with either `-mean()` or `-std()`), per step 2 above.
     * Rename all the variables with more readable, descriptive variable names, per step 4 above.
-    * Write out the resulting dataset as `tidy_full.csv`
-* Create the `tidy_average.csv` dataset, per step 5 above.
+    * Write out the resulting dataset as `tidy_full.txt`
+* Create the `tidy_average.txt` dataset, per step 5 above.
     * Use the `melt()` function from the `reshape2` library to transform the wide-form dataset (one column per measurement variable) into a narrow-form one (one column for variable name and one for its value).
     * Use the `ddply()` function from the `plyr` library to compute the mean of each measurement variable for each subject/activity combination.
-    * Write out the resulting dataset as `tidy_average.csv`
+    * Write out the resulting dataset as `tidy_average.txt`
 
 The script itself is also extensively commented.
 
